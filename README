@@ -1,0 +1,24 @@
+netxmms-1.0.0
+
+
+netxmms is a server which allows you to remotely control any XMMS
+[www.xmms.org] based media player (this includes Beep Media Player
+[www.beep-media-player.org] and Audacious [www.audacious-media-player.org].
+Possibly some other forks, too).
+
+netxmms is complimented by clients which (should) run on other machines over a
+network, normally over a LAN (although any network connection is fine). netxmms
+(1.0.0) provides the following functionality to clients:
+    * Forward/Next
+    * Pause
+    * Play
+    * Stop
+    * Volume control
+All clients and versions of netxmms are (or at least should be) backwards
+compatible. That is, any client will work with any server (as of this version,
+the server does not send any information and only receives it; this may be
+subject to change but will not break compatibility should it be implemented).
+
+Available is a GTK+ client, and a Nintendo DS client. See the respective
+subdirectories and READMEs (as well as the netxmms/README for details on the
+netxmms server).

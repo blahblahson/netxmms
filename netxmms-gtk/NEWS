@@ -1,0 +1,7 @@
+2007-12-14: initial release 1.0.0
+    Initial release; features are:
+        * Forward/Next
+        * Pause
+        * Play
+        * Stop
+        * Volume control

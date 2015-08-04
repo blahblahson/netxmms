@@ -1,0 +1,5 @@
+Until I autotools-ify this, compile like so:
+$ gcc src/*.c -o netxmms-gtk `pkg-config gtk+-2.0 --cflags --libs`
+
+I would not suggest installing it to /usr/bin or whatnot until I add autotools
+stuff.

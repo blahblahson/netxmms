@@ -1,0 +1,2 @@
+Binaries are in dist/, source is in src/. To compile, run make. To run, put the
+respective binary onto your device that lets you play homebrew stuff.

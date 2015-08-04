@@ -1,0 +1,48 @@
+netxmms-1.0.0
+
+
+netxmms is a server which allows you to remotely control any XMMS
+[www.xmms.org] based media player (this includes Beep Media Player
+[www.beep-media-player.org] and Audacious [www.audacious-media-player.org].
+Possibly some other forks, too).
+
+Running the server is as simple as:
+$ netxmms [port]
+netxmms defaults to port 42561, but you can change that by passing an
+additional argument.
+
+netxmms is complimented by clients which (should) run on other machines over a
+network, normally over a LAN (although any network connection is fine). netxmms
+(1.0.0) provides the following functionality to clients:
+    * Forward/Next
+    * Pause
+    * Play
+    * Stop
+    * Volume control
+All clients and versions of netxmms are (or at least should be) backwards
+compatible. That is, any client will work with any server (as of this version,
+the server does not send any information and only receives it; this may be
+subject to change but will not break compatibility should it be implemented).
+
+Notes:
+    * Although netxmms runs on a non-standard port which is usually not
+      forwarded, that does not mean you should forward it. Due to there being
+      no authentication (yet), forwarding the port would mean anybody can
+      connect to your netxmms server. Although it poses no security risk at
+      all, it would be best to not forward at all. Under the unlikely (and
+      strange) circumstance that you want to connect over a WAN (for example,
+      the Internet), change the running port to something else at least. A
+      port-scan would probably reveal the port either way, but there is no
+      security risk and it shouldn't really concern you. Most of the time you
+      will probably be connecting over a LAN however, in which case you
+      shouldn't forward it.
+    * At the moment netxmms is not a plugin to XMMS (or forks). This might
+      change, but at the moment it means it does not send information to the
+      client and uses the `XMMS remote' interface instead (which means it can
+      not have callbacks for track-change or volume-change and such).
+    * netxmms will only output to stdout if an error occurs. This usually
+      results in the server terminating with an exit status of 1, but may not
+      exit on some failed calls to close(). If XMMS (or a fork with XMMS remote
+      interface) is not running, netxmms will output "XMMS remote not running"
+      on stdout and terminate with an exit status of 0. If you don't want any
+      output at all, simply redirect stdout to /dev/null.

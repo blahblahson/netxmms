@@ -1,0 +1,8 @@
+Until I autotools-ify this, compile like so:
+$ gcc src/*.c -o netxmms -laudacious `pkg-config audacious --cflags`
+
+Replace `audacious' with whatever (xmms or whatever), audacious is just the
+newest so I give the above example.
+
+I would not suggest installing it to /usr/bin or whatnot until I add autotools
+stuff.

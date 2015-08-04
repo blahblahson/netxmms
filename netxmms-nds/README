@@ -1,0 +1,41 @@
+netxmms-nds-1.0.0
+_________________
+
+netxmms-nds is a client for the XMMS (and forks) network controller server
+netxmms. Since you downloaded this you probably have a good idea of what
+netxmms is. If not, have a look at the README for netxmms. You can find all
+such related stuff at http://CENSOREDCENSOREDC.
+
+I made this in about a day, since it was a lot of code being recycled and such.
+It's probably the most un-friendly interface for a media player with the menus,
+but the controlling of XMMS itself is relatively basic.
+
+The most frustrating part to use is the configuration menu. This is details for
+the netxmms server -- what IP address the server is located at, and what port
+it is listening on. The controls are horrible to configure, but if you see the
+code you will notice it makes it amazingly easy to program. In any case, where
+it says HOLD, hold it to produce that function. For example, to increment the
+port by 10, hold up and move right (+10/PORT+). Similarly, right and down will
+increment by 100, and right alone will increment by 1. Setting the IP address
+relies on holding A/B/X/Y and using L/R and UP/DOWN. It's the same principle -
+to set the second segment of the IP address, hold B and adjust with L/R, using
+UP/DOWN for faster increment. It's pretty fast anyway, so you might have
+trouble incrementing by 1 and 1 only, so take your time with that. It's best to
+lightly pull down the button very quickly. Do this a few times and you'll get
+it.
+
+As for connecting, netxmms-nds uses the WFC data in the DS firmware to connect.
+If this isn't set properly it will fail to connect. You can set these options
+by going into a Wifi game like Mario Kart and going to the WFC configuration
+menu. Set up the Wifi stuff there. Note that the DS doesn't support WPA
+encryption.
+
+Note: at the moment you will find that you can only connect once with
+netxmms-nds to the same server process. This is because when you power down the
+DS, it doesn't perform an orderly shutdown on the connection. I tried to fix
+this with strange results and no positive development, so I'll leave it until
+next revision. The server will be stuck waiting for the client, so right now
+practical use is somewhat limited.
+
+See INSTALL for installation related information. COPYING contains licencing
+details.

@@ -1,0 +1,33 @@
+netxmms-gtk-1.0.0
+
+
+netxmms-gtk is a client to compliment the netxmms [www.digital-haze.net]
+server. Currently, it has the following features:
+    * Forward/Next
+    * Pause
+    * Play
+    * Stop
+    * Volume control
+
+Usage is simple:
+$ netxmms <ip address> [port]
+Where <ip address> is the location of the computer running the server (and
+hence XMMS/XMMS fork). [port] designates the port which the server is running
+on, and is optional (it defaults to 42561).
+
+Notes:
+    * I hardly ever write things for Windows, but I figured I should make the
+      source for this compatible. It should compile with windows as far as I
+      have tested, but some of the functionality may be impeded due to little
+      experience with win32 development and Windows' lack of POSIX compliance.
+      It's not tested very much on Windows either, but it seemed to work fine.
+    * Another note regarding Windows is how it shuts down sockets. netxmms
+      reports a 'connection refused' error when netxmms-gtk terminates on
+      Windows. This could be to my limited knowledge of how winsock functions,
+      or just bad programming on Microsoft's part. Either way it should close
+      the socket cleanly instead.
+    * Volume control is implemented, but 1.0.0 does not fetch the volume on
+      startup and starts at 77. This is partly due to laziness, and partly for
+      consistency since netxmms (presently, at 1.0.0) can not respond to
+      changes in volume at the moment (see the netxmms-1.0.0 README for
+      detail).
